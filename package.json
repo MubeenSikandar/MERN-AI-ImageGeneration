@@ -1,11 +1,15 @@
 {
+  "proxy": "http://localhost:8080/api/v1",
   "name": "server",
   "version": "1.0.0",
   "type": "module",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index"
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm start\" \"npm run client\""
   },
   "author": "",
   "license": "ISC",
@@ -25,3 +29,4 @@
     "eslint-plugin-import": "^2.26.0"
   }
 }
+
